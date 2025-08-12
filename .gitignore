@@ -1,0 +1,31 @@
+# Virtual environment
+/root/teste_nubank/venv/
+teste_nubank/venv/
+venv/
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# Pytest cache
+.pytest_cache/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+
+# Environment files
+*.env
+.env
+.env.local
+
+# Input/output files
+input.txt
+output.txt
+
+# IDE / Editor files
+*.swp
+*.swo
+*~
