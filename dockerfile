@@ -10,5 +10,5 @@ COPY . .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Command to run the main script (overridden in docker-compose.yml)
-CMD ["python", "src/main.py"]
+# Default command (overridden in docker-compose.yml)
+# CMD ["python", "src/main.py"]

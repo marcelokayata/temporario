@@ -25,3 +25,5 @@ Example wich works: [{"operation":"buy", "unit-cost":10.00, "quantity": 10000},{
 
 
 docker-compose up --build
+docker-compose build
+docker-compose up
