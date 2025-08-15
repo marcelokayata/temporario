@@ -3,6 +3,9 @@ Neste teste eu utilizei IA do Grok, tive que adiar a entrega do teste duas vezes
 
 Eu tive que guiar a IA, fazer ajustes no código, mas acabou dando certo, podendo rodar os testes e a cobertura utilizando somente o docker, como costumo fazer onde trabalho.
 
+Se quiser calcular valores diferentes só alterar em:
+input.txt
+
 Rodar com docker
 remover orphans:
 docker-compose down --remove-orphans
