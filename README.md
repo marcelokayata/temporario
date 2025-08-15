@@ -42,7 +42,7 @@ pip freeze > requirements.txt
 Ruuning the application without docker:
  python src/main.py < input.txt
 
-
+Caminho do pythonPath
 Run test: PYTHONPATH=/root/teste_nubank venv/bin/pytest tests/
 
 
