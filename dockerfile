@@ -11,4 +11,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Default command (overridden in docker-compose.yml)
-# CMD ["python", "src/main.py"]
+CMD ["python", "src/main.py"]

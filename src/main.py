@@ -9,7 +9,6 @@ from src.infra.io_handler import process_input_line
 
 def main():
     calculator = TaxCalculator()
-    print("rodou")
     for line in sys.stdin:
         output = process_input_line(line, calculator)
         if output:

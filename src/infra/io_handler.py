@@ -4,14 +4,12 @@ from ..domain.entities import Operation
 from ..domain.use_cases.tax_calculator import TaxCalculator
 
 def process_input_line(line: str, calculator: TaxCalculator) -> str:
-    # Strip whitespace and newlines to ensure clean JSON
-    line = json.dumps(json.loads(line))
+    # Strip whitespace and newlines
     line = line.strip()
     if not line:
         return ""
-    # Debug: Print the exact input for inspection
-    # print(f"DEBUG: Raw input (len={len(line)}): {repr(line)}", file=sys.stderr)
     try:
+        # Ensure the line is valid JSON before parsing
         ops_data = json.loads(line)
         if not isinstance(ops_data, list):
             print(f"Error: Input JSON is not a list: {ops_data}", file=sys.stderr)

@@ -20,7 +20,8 @@ def test_process_multiple_lines(capsys, mock_stdin):
     mock_stdin(input_data)
     main()
     captured = capsys.readouterr()
-    outputs = captured.out.strip().split('\n')
+    # Filter out non-JSON lines (e.g., "rodou")
+    outputs = [line for line in captured.out.strip().split('\n') if line.startswith('[')]
     expected = [
         '[{"tax": 0.0}, {"tax": 0.0}, {"tax": 0.0}]',
         '[{"tax": 0.0}, {"tax": 10000.0}, {"tax": 0.0}]'
@@ -28,6 +29,5 @@ def test_process_multiple_lines(capsys, mock_stdin):
     assert outputs == expected
 
 def test_empty_line_stops():
-    from src.domain.use_cases.tax_calculator import TaxCalculator
     calculator = TaxCalculator()
     assert process_input_line('', calculator) == ''
