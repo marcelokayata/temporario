@@ -21,10 +21,6 @@ eggs/
 .env
 .env.local
 
-# Input/output files
-input.txt
-output.txt
-
 # IDE / Editor files
 *.swp
 *.swo
