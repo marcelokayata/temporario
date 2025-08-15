@@ -2,7 +2,8 @@ import json
 import pytest
 from io import StringIO
 from src.main import main
-from src.domain.infra.io_handler import process_input_line
+from src.infra.io_handler import process_input_line
+from src.domain.use_cases.tax_calculator import TaxCalculator
 
 @pytest.fixture
 def mock_stdin(monkeypatch):

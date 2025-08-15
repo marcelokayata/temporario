@@ -19,4 +19,9 @@ Ruuning the application:
 Running test:
 pytest tests/
 
+Run test: PYTHONPATH=/root/teste_nubank venv/bin/pytest tests/
+
 Example wich works: [{"operation":"buy", "unit-cost":10.00, "quantity": 10000},{"operation":"sell", "unit-cost":20.00, "quantity": 5000}]
+
+
+docker-compose up --build
