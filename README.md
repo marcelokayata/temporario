@@ -1,3 +1,28 @@
+Um aviso importante (para ser transparente)
+Neste teste eu utilizei IA do Grok, tive que adiar a entrega do teste duas vezes, pois estou no meio de uma entrega grande onde trabalho.
+
+Eu tive que guiar a IA, fazer ajustes no código, mas acabou dando certo, podendo rodar os testes e a cobertura utilizando somente o docker, como costumo fazer onde trabalho.
+
+Rodar com docker
+remover orphans:
+docker-compose down --remove-orphans
+
+Remover warning:
+image.png
+
+Configurar aplicação:
+docker-compose build
+
+ROdar aplicação:
+docker-compose run app
+
+Rodar teste:
+docker-compose run test
+
+Rodar cobertura:
+docker-compose run coverage
+
+Isso só são intruções usadas quando não tinha docker
 criar ambiente virtual
 ```bash
 python -m venv venv
@@ -14,22 +39,10 @@ Para criar requirements.txt
 ```bash
 pip freeze > requirements.txt
 ```
-Ruuning the application:
+Ruuning the application without docker:
  python src/main.py < input.txt
-Running test:
-pytest tests/
+
 
 Run test: PYTHONPATH=/root/teste_nubank venv/bin/pytest tests/
 
-Example wich works: [{"operation":"buy", "unit-cost":10.00, "quantity": 10000},{"operation":"sell", "unit-cost":20.00, "quantity": 5000}]
 
-
-docker-compose up --build
-docker-compose build
-docker-compose up
-
-Run application:
-docker-compose up --build app
-
-Run test:
-docker-compose run test

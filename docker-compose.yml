@@ -16,3 +16,13 @@ services:
     image: tax-calculator-app
     container_name: tax_calculator_test
     command: pytest tests/
+
+  coverage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tax-calculator-app
+    container_name: tax_calculator_coverage
+    volumes:
+      - ./coverage:/app/coverage
+    command: pytest tests/ --cov=src --cov-report=term --cov-report=html:coverage/html
